@@ -30,8 +30,9 @@ public class MainVerticle extends AbstractVerticle {
   public void start(Promise<Void> startPromise) throws Exception {
     Router router = Router.router(vertx);
     //router.get("/").handler(context -> context.reroute("index.html"));
-    router.get("/test.html").handler(context -> context.reroute("/sse/index.html"));
-    router.get("/sse.html").handler(context -> context.reroute("/sse/index.html"));
+    router.get("/dev").handler(context -> context.reroute("/index-dev.html"));
+    router.get("/test").handler(context -> context.reroute("/sse/index.html"));
+    //router.get("/sse.html").handler(context -> context.reroute("/sse/index.html"));
     router.get("/sse").handler(eventBusSSEBridge);
     //router.get("/dev").handler(rc -> rc.reroute("/freeboard/index-dev.html"));
     router.route("/*").handler(StaticHandler.create());

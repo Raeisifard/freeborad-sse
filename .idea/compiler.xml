@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="server_sent_event" />
+        <module name="freeboard-sse" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="freeboard-sse" target="11" />
       <module name="server_sent_event" target="11" />
     </bytecodeTargetLevel>
   </component>
