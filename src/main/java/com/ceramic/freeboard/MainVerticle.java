@@ -52,6 +52,7 @@ public class MainVerticle extends AbstractVerticle {
       } else if (!magicToken.equals(token)) {
         sseConnection.reject(403);
       }
+
       System.out.println("Last Id: " + sseConnection.lastId());
     });
     server = vertx.createHttpServer();
